@@ -2,8 +2,11 @@ import React from "react";
 import { Switch, Route, withRouter, Link } from "react-router-dom";
 import FormWithFormik from "./components/FormWithFormik";
 import FormBasicFormik from "./components/FormBasicFormik";
+import FormBasicFormikWithArray from "./components/FormBasicFormikWithArray";
 
 import "./App.css";
+
+import {elem} from "./components/array.js";
 
 const App = props => {
   return (
@@ -15,8 +18,9 @@ const App = props => {
           render={() => (
             <div className="content">
               <h1>Home</h1>
-              <Link to="/withformik">with Formik</Link> |{" "}
-              <Link to="/formik">Formik Components</Link>
+              <Link to="/withformik">with Formik</Link> |
+              <Link to="/formik"> Formik Components</Link> |
+              <Link to="/formikwitharray"> Formik With Array</Link>
             </div>
           )}
         />
@@ -35,6 +39,15 @@ const App = props => {
           render={() => (
             <div className="content">
               <FormBasicFormik />
+            </div>
+          )}
+        />
+        <Route
+          exact
+          path="/formikwitharray"
+          render={() => (
+            <div className="content">
+              <FormBasicFormikWithArray data = {elem}/>
             </div>
           )}
         />

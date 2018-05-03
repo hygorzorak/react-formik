@@ -21,7 +21,7 @@ const FormBasicFormik = () => (
         return errors;
       }}
       onSubmit={(values, { setSubmitting, setErrors }) => {
-        console.log("submit");
+        console.log(values);
       }}
       render={({
         values,

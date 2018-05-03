@@ -47,7 +47,7 @@ const FormFormik = withFormik({
     return errors;
   },
   handleSubmit: (values, { props, setSubmitting, setErrors }) => {
-    console.log("submit");
+    console.log(values);
   }
 })(InnerForm);
 
