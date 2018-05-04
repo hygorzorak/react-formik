@@ -6,7 +6,8 @@ import FormBasicFormikWithArray from "./components/FormBasicFormikWithArray";
 
 import "./App.css";
 
-import {elem} from "./components/array.js";
+import { elem } from "./components/array.js";
+import FormGroupWithFormik from "./components/FormGroupWithFormik";
 
 const App = props => {
   return (
@@ -21,6 +22,7 @@ const App = props => {
               <Link to="/withformik">with Formik</Link> |
               <Link to="/formik"> Formik Components</Link> |
               <Link to="/formikwitharray"> Formik With Array</Link>
+              <Link to="/formgroup"> Form Group</Link>
             </div>
           )}
         />
@@ -47,7 +49,16 @@ const App = props => {
           path="/formikwitharray"
           render={() => (
             <div className="content">
-              <FormBasicFormikWithArray data = {elem}/>
+              <FormBasicFormikWithArray data={elem} />
+            </div>
+          )}
+        />
+        <Route
+          exact
+          path="/formGroup"
+          render={() => (
+            <div className="content">
+              <FormGroupWithFormik />
             </div>
           )}
         />
